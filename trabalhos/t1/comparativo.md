@@ -16,7 +16,7 @@ Nome: Gabriela Luisa Eckel
 | Frequência do(s) processador(es)                          |              2,2 GHz         |        3.4GHz         |
 | Memória total                                             |          153.600 GB            |        8GB         |
 | Tipo(s) de interconexão entre os núcleos/processadores    |     Ethernet 10G                  |          xx       |
-| Desempenho Linpack                                        |        915.425 TFlop / s               |    47.1124 GFlop / s  |
+| Desempenho Linpack                                        |        915.425 TFlop / s               |    57.1124 GFlop / s  |
 
 ### Referências
 - Fornecedor de Serviços T. Lenovo x3950, Intel Xeon E7-8860v4 18C 2.2 GHz, Ethernet 10G. https://www.top500.org/system/179084 .

@@ -8,9 +8,9 @@ Nome: Gabriela Luisa Eckel
 | Característica                                            | Computador no TOP500  | Meu computador  |
 | --------------------------------------------------------- | --------------------- | --------------- |
 | Nome/Título                                               |          	Lenovo System x3950             |       Lenovo Ideapad 330          |
-| Imagem (foto, diagrama, screenshot, etc.)                 | <img src="https://www.lenovo.com/medias/lenovo-servers-racks-system-x-x3950-x6-main.png?context=bWFzdGVyfGltYWdlc3w4NTE0M3xpbWFnZS9wbmd8aW1hZ2VzL2g0ZS9oODAvOTM2NzEwOTYzMjAzMC5wbmd8NTRmYzFlOTllODE0NzZjYTIzZjE4NzA0ZGUxYWM4OGYxNTg2NGRlNGZiMzIzOTUzNWVhMTZhM2M5ZDdmNDlhZQ" width="98"> |  <img src="https://www.lenovo.com/medias/hero-br-330.png?context=bWFzdGVyfHJvb3R8NjY0MzU5fGltYWdlL3BuZ3xoMzQvaDEzLzk3NzM2ODc0NzIxNTgucG5nfDljYmFiMmZmOWMwYzk2ZTQ1MTZiNTMyYmZkMzEyM2NiNmI3ZjA4ZDAzYzQ3NDU0NjRkOTg5NGU1OTY2NDQzNWU" width="98">|
+| Imagem (foto, diagrama, screenshot, etc.)                 | <img src="https://www.lenovo.com/medias/lenovo-servers-racks-system-x-x3950-x6-main.png?context=bWFzdGVyfGltYWdlc3w4NTE0M3xpbWFnZS9wbmd8aW1hZ2VzL2g0ZS9oODAvOTM2NzEwOTYzMjAzMC5wbmd8NTRmYzFlOTllODE0NzZjYTIzZjE4NzA0ZGUxYWM4OGYxNTg2NGRlNGZiMzIzOTUzNWVhMTZhM2M5ZDdmNDlhZQ" width="120"> |  <img src="https://www.lenovo.com/medias/hero-br-330.png?context=bWFzdGVyfHJvb3R8NjY0MzU5fGltYWdlL3BuZ3xoMzQvaDEzLzk3NzM2ODc0NzIxNTgucG5nfDljYmFiMmZmOWMwYzk2ZTQ1MTZiNTMyYmZkMzEyM2NiNmI3ZjA4ZDAzYzQ3NDU0NjRkOTg5NGU1OTY2NDQzNWU" width="120">|
 | Classificação de Flynn                                    |       MIMD                |       MIMD          |
-| Memória: compartilhada, distribuída ou ambas?             |           Distribuída            |      Compartilhada           |
+| Memória: compartilhada, distribuída ou ambas?             |           Ambas          |      Compartilhada           |
 | Número total de núcleos de processamento                  |            43,200           |            4 físicos e 8 threads     |
 | Fabricante e modelo do(s) processador(es)                 |         Intel Xeon E7-8860v4 18C              |     Intel Core i5 8250U            |
 | Frequência do(s) processador(es)                          |              2,2 GHz         |        3.4GHz         |

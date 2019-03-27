@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f5bc16db1aa4ab36ee4b9e928cc5b71b818c071
 Processador: Intel Core i5 8250U
 SO:Linux
 Nº Nucleos: 4

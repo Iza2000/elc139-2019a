@@ -6,7 +6,7 @@
 ## parte 1: PTHREAD
 
 ##### 1-Explique como se encontram implementadas as 4 etapas de projeto: particionamento, comunicação, aglomeração, mapeamento (use trechos de código para ilustrar a explicação).
-######Particionamento:   
+###### Particionamento:   
 O particionamento está sendo feito por estas linhas, pois esta dividindo o serviço das threads. 
 
 ```
@@ -151,10 +151,10 @@ system("pause");
 
 ### Referencias
 
-Programação Paralela e Distribuída Métricas de Desempenho - DCC."https://www.dcc.fc.up.pt/~ricroc/aulas/0708/ppd/apontamentos/metricas.pdf".
-Programação com OpenMP. Andrea Schwertner Charão. "https://docs.google.com/presentation/d/1Wim7xC-X4qAo0jYCm3A4yzRpaHBl_z7yIlvzPUgT0x0/export/pdf".
-Intel Modern Code Partner OpenMP. UFGRS, INTEL, GPPD."http://inf.ufrgs.br/gppd/intel-modern-code/slides/workshop-1/MCP_Pt2_Pratica.pdf?fbclid=IwAR3U8G8cni2kYT87oiTfWWcWIeMbajRRwW91EW4gcyUwOEhgLefruBirzvo".
-OpenMP. Blaise Barney, Lawrence Livermore National Laboratory."https://computing.llnl.gov/tutorials/openMP/#ProgrammingModel".
+[Programação Paralela e Distribuída Métricas de Desempenho - DCC](https://www.dcc.fc.up.pt/~ricroc/aulas/0708/ppd/apontamentos/metricas.pdf)
+[Programação com OpenMP. Andrea Schwertner Charão.] (https://docs.google.com/presentation/d/1Wim7xC-X4qAo0jYCm3A4yzRpaHBl_z7yIlvzPUgT0x0/export/pdf)
+[Intel Modern Code Partner OpenMP. UFGRS, INTEL, GPPD](http://inf.ufrgs.br/gppd/intel-modern-code/slides/workshop-1/MCP_Pt2_Pratica.pdf?fbclid=IwAR3U8G8cni2kYT87oiTfWWcWIeMbajRRwW91EW4gcyUwOEhgLefruBirzvo)
+[OpenMP. Blaise Barney, Lawrence Livermore National Laboratory](https://computing.llnl.gov/tutorials/openMP/#ProgrammingModel)
 
 
 

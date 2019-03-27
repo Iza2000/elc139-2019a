@@ -1,0 +1,2 @@
+processador, memória, SO
+Intel Core i5-8250U, 8gb, Linux 

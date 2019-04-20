@@ -75,20 +75,10 @@ E nos casos C, onde eu mudei as repetiçoes e não somente as threads, todos os 
 
 ##### 4-Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
 
-| uso 1 thread| uso +1 thread| speedup|
-|-------------|--------------|--------|
-| 6584183(1)  |6534451(2)    |1,00    |
-| 6584183(1)  |7868565(3)    |0,83    |
-| 6584183(1)  |8596610(4)    |0,76    |
-| 3513795(1)  |2795428(2)    |1,25    |
-| 3513795(1)  |4265054(3)    |1,02    |
-| 3513795(1)  |3417622(4)    |0,82    |
-| 13647068(1) |13700158(2)   |0,99    |
-| 13647068(1) |14168045(3)   |0,96    |
-| 13647068(1) |14953767(4)   |0,91    |
-| 66057(1)    |37007(2)      |1,78    |
-| 66057(1)    |65040(3)      |1,01    |
-| 66057(1)    |48863(4)      |1,35    |
+|size    | repetitions |thread | speedup|
+|--------|-------------|-------|---------|
+|1000000 | 200         |1      |29.829405|
+|500000  |2000         |2      |31.897625
 
 ##### 5-Explique as diferenças entre pthreads_dotprod.c e pthreads_dotprod2.c. Com as linhas removidas, o programa está correto?
 

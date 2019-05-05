@@ -2,11 +2,19 @@
 # T5: Primeiros passos com MPI
 
 Nome: Gabriela Luisa Eckel
-Disciplina:Programação Paralela
+
 
 ## Parte 1
 
++ Implemente uma versão em MPI do programa do trabalho t2, que calcula repetidas vezes o produto escalar entre 2 vetores. Os argumentos do programa devem ser: o número de elementos para cada processo e o número de repetições.
+O programa em questão está implementado aqui: [Programa](pt2.c).
++ Avalie o desempenho do programa conforme as instruções do trabalho t2, mas variando o número de processos (-np) ao invés de threads.
+
+
 ## Parte 2
+
++ Implemente um programa MPI que transporte uma mensagem em um pipeline formado por processos de 0 a NP-1 (processo 0 envia para 1, processo 1 envia para 2, ..., processo NP-1 mostra o resultado). A mensagem é um número inteiro que é incrementado antes de ser passado adiante.
+O programa em questão está implementado aqui: [Programa](pipeline.c).
 
 ## Parte 3
 

@@ -11,10 +11,12 @@ Nome: Gabriela Luisa Eckel
 MPI_Scatter copiará o elemento apropriado no buffer de recebimento do processo.
 MPI_Bcast usa um único elemento de dados no processo raiz (a caixa vermelha) e o copia para todos os outros processos.
 MPI_Gather é o inverso do MPI_Scatter . Em vez de espalhar elementos de um processo para muitos processos, o MPI_Gather elementos de vários processos e os reúne em um único processo.
+[Link códígo modificado](matriz_mult_sr.c)
 
 ## Parte 2  
 
 + Leia o artigo Send-receive considered harmful: Myths and realities of message passing e escreva um resumo crítico relacionando os argumentos do autor com sua própria experiência de programação com MPI. Obs: artigo acessível pela rede da UFSM (caso esteja em outra rede, use proxy ou siga instruções aqui).
+
 
 
 

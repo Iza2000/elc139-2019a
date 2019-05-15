@@ -22,6 +22,7 @@ MPI_Gather é o inverso do MPI_Scatter . Em vez de espalhar elementos de um proc
 
 **TEMA: SEND-RECEIVE**
 &nbsp;
+
 **Palavras-Chave:** send/recv/gatther/allgather/scatter
 
 **ASSUNTO DISCUTIDO:** As diversas situações citadas no artigo comprovam que o desenvolvimento de programas para sistemas  paralelos e distribuídos continua sendo um desafio difícil.

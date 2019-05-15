@@ -16,7 +16,7 @@ MPI_Gather é o inverso do MPI_Scatter . Em vez de espalhar elementos de um proc
 ## Parte 2  
 
 + Leia o artigo Send-receive considered harmful: Myths and realities of message passing e escreva um resumo crítico relacionando os argumentos do autor com sua própria experiência de programação com MPI. Obs: artigo acessível pela rede da UFSM (caso esteja em outra rede, use proxy ou siga instruções aqui).
-
+```
 **Send-receive considered harmful: Myths and realities of message passing**
 
 
@@ -35,7 +35,7 @@ Como por exemplo no nosso t6, onde substitui o uso do send e recive, por gatther
 &nbsp;
 Ao meu entendimento sobre mpi, percebi que para cada caso há uma combinação diferente e que pode ser melhor utilizada. Concordo com o autor do artigo em muitas partes e acredito que devemos explorar todas as formas e averiguar qual a melhor em cada caso. 
 
-
+```
 
 
 

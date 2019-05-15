@@ -24,11 +24,9 @@ MPI_Gather é o inverso do MPI_Scatter . Em vez de espalhar elementos de um proc
 **Palavras-Chave:** send/recv/gatther/allgather/scatter
 
 **ASSUNTO DISCUTIDO:** As diversas situações citadas no artigo comprovam que o desenvolvimento de programas para sistemas  paralelos e distribuídos continua sendo um desafio difícil.
-
 &nbsp;
-
-
 Demonstra-se fatos de que o uso do método send/recv não é o melhor, comparando o com o método MPI_Bcast onde o uso é muito mais simples e assim usa menos linhas de código e poupa serviço. No artigo o autor cita os vários desafios de programar em paralelo utilizando send e recive.
+
 &nbsp;
 Podemos perceber que o uso de outras combinações de comunicação são mais efetivas que o uso de send e recive, e devemos evita-las.
 &nbsp;

@@ -2,11 +2,9 @@
 
 # T3: Scheduling com OpenMP
 Nome:Gabriela Luisa Eckel
-[Código](OpenMPDemoABC.cpp)
+[Código](OpenMPDemoABD.cpp)
 
 ### Saídas 
-```
-------------------------------------
 **STATIC**
 ```
 Caso 1.0 sem usar o CRITICAL, espera-se erro.
@@ -66,7 +64,8 @@ Caso 3.2, usando o CRITICAL e chunk = 1
         shedule_type: omp_sched_guided, chunk_size:  (default)
 BABBBCBABACBCBCBCBAACBCBCBCABAAAAAAACBABCBBBBACAAABABABACCBC
 A=21 B=24 C=15
-``````
+```
+------------------------------------
 **AUTO**
 ```
 Caso 5.0 sem usar o CRITICAL, espera-se erro.
@@ -86,6 +85,3 @@ Caso 5.2, usando o CRITICAL e chunk = 1
 BABABCBCCAACACBCBCACCBCBACACAAACAAACACBABCCCCCAABABABBBBBBBB
 A=20 B=20 C=20
 ```
-------------------------------------
-
-

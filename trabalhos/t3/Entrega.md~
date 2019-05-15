@@ -7,6 +7,28 @@ Nome:Gabriela Luisa Eckel
 ### Saídas 
 ```
 ------------------------------------
+
+**AUTO**
+```
+Caso 5.0 sem usar o CRITICAL, espera-se erro.
+        shedule_type: omp_sched_auto, chunk_size:
+BBCBCABCBACBACBCABCBACBACBCBCBABCABCABCABCBACBCBCA-CA-AAAAAA
+A=19 B=20 C=19
+```
+```
+Caso 5.1, usando o CRITICAL e sem a especificação do chunk = nTimes
+        shedule_type: omp_sched_auto, chunk_size:
+BACABCBACABCBCBABCBBCBABCACBAAABACACBABCBBBABAACACBAAACCCCCC
+A=20 B=20 C=20
+```
+```
+Caso 5.2, usando o CRITICAL e chunk = 1
+        shedule_type: omp_sched_auto, chunk_size:  (default)
+BABABCBCCAACACBCBCACCBCBACACAAACAAACACBABCCCCCAABABABBBBBBBB
+A=20 B=20 C=20
+```
+------------------------------------
+
 **STATIC**
 ```
 Caso 1.0 sem usar o CRITICAL, espera-se erro.
@@ -67,25 +89,18 @@ Caso 3.2, usando o CRITICAL e chunk = 1
 BABBBCBABACBCBCBCBAACBCBCBCABAAAAAAACBABCBBBBACAAABABABACCBC
 A=21 B=24 C=15
 ``````
-**AUTO**
-```
-Caso 5.0 sem usar o CRITICAL, espera-se erro.
-        shedule_type: omp_sched_auto, chunk_size:
-BBCBCABCBACBACBCABCBACBACBCBCBABCABCABCABCBACBCBCA-CA-AAAAAA
-A=19 B=20 C=19
-```
-```
-Caso 5.1, usando o CRITICAL e sem a especificação do chunk = nTimes
-        shedule_type: omp_sched_auto, chunk_size:
-BACABCBACABCBCBABCBBCBABCACBAAABACACBABCBBBABAACACBAAACCCCCC
-A=20 B=20 C=20
-```
-```
-Caso 5.2, usando o CRITICAL e chunk = 1
-        shedule_type: omp_sched_auto, chunk_size:  (default)
-BABABCBCCAACACBCBCACCBCBACACAAACAAACACBABCCCCCAABABABBBBBBBB
-A=20 B=20 C=20
-```
 ------------------------------------
 
+**RUNTIME**
+- O escalonamento runtime é diferente dos demais por não possuir o chuck size como variável de controle, por esse motivo o abaixo pode ser definido usando a chamada posterior do escalonamento em tempo de execução.
+```c++
+  #pragma omp for schedule(runtime)
+  for (int i = 0; i < nThreads * nTimes; i++) {
+      array->addChar(c);
+  }
+```
+```c++
+void omp_set_schedule(omp_sched_t kind, int chunk_size);
+```
+------------------------------------
 

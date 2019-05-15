@@ -57,14 +57,20 @@ for (i = 0; i < nthreads; i++) {
 
 ##### 3- A aceleração se sustenta para outros tamanhos de vetores, números de threads e repetições? Para responder a essa questão, você terá que realizar diversas execuções, variando o tamanho do problema (tamanho dos vetores e número de repetições) e o número de threads (1, 2, 4, 8..., dependendo do número de núcleos). Cada caso deve ser executado várias vezes, para depois calcular-se um tempo de processamento médio para cada caso. Atenção aos fatores que podem interferir na confiabilidade da medição: uso compartilhado do computador, tempos muito pequenos, etc.
 
-
-|Repeat/Vetor| uso 1 thread| uso 2 thread |uso 3 thread| uso 4 thread|TM |
-|--------|-------------|--------------|------------|-------------|---|
-|[1000000] 200 repeat| 6584183  |6534451(1a)    |7868565(2a)  |8596610(3a)|7868565
-|[500000] 2000 repeat| 3513795 |2795428(1b)    |4265054(2b)  |3417622(3b)|2795428
-|[1000000] 2000 repeat| 13647068 |13700158(1c)   |14168045(2c) |1495376(3c)|14168045
-|[10000]  xrepeat| 66057   |37007(1d)     |65040(2d)    |48863(3d)|48863|
-
+|NT| size    |repetitions |usec   |
+|--|---------|------------|-------|
+| 1|1000000  |2000        |5537308|
+| 2|500000   |2000        |2767771|
+| 4|25000    |2000        |154494 |
+| 1|100000   |2000        |551736 |
+| 2|50000    |2000        |283245 |
+| 4|25000    |2000        |144914 |
+| 1|137001   |0,99    |------------|
+| 2|14168045 |0,96    |------------|
+| 4|14953767 |0,91    |------------|
+| 1|37007(2) |1,78    |------------|
+| 2|65040(3) |1,01    |------------|
+| 4|48863(4) |1,35    |------------|
 
 Fiz diversas execuçôes com variadas threads, vetores e repetições e concluí que onde as repetiçoes variam o uso do paralelismo é mais eficaz, e quando sao numeros muito pequenos e aumentam as threads o speedup diminui;
 Na comparação 1a, podemos notar que o o paralelismo ajudou, pois comparando o uso de duas threads o resultado foi melhor.
@@ -75,10 +81,20 @@ E nos casos C, onde eu mudei as repetiçoes e não somente as threads, todos os 
 
 ##### 4-Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
 
-|size    | repetitions |thread | speedup|
-|--------|-------------|-------|---------|
-|1000000 | 200         |1      |29.829405|
-|500000  |2000         |2      |31.897625
+|Tempo Sequencial|Tempo Paralelo| SpeedUP|
+|-------------|--------------|------------|
+| 6584183(1)  |6534451(2)    |1,00    |
+| 6584183(1)  |7868565(3)    |0,83    |
+| 6584183(1)  |8596610(4)    |0,76    |
+| 3513795(1)  |2795428(2)    |1,25    |
+| 3513795(1)  |4265054(3)    |1,02    |
+| 3513795(1)  |3417622(4)    |0,82    |
+| 13647068(1) |13700158(2)   |0,99    |
+| 13647068(1) |14168045(3)   |0,96    |
+| 13647068(1) |14953767(4)   |0,91    |
+| 66057(1)    |37007(2)      |1,78    |
+| 66057(1)    |65040(3)      |1,01    |
+| 66057(1)    |48863(4)      |1,35    |
 
 ##### 5-Explique as diferenças entre pthreads_dotprod.c e pthreads_dotprod2.c. Com as linhas removidas, o programa está correto?
 

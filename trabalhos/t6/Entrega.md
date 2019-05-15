@@ -6,10 +6,10 @@
 ## Parte 1
 
 + No código fornecido, são feitas várias chamadas de send/recv que podem ser trocadas por outras funções. Você deve descobrir quais são essas funções, fazer a alteração e testar se o resultado é o mesmo. (O programa gera sempre as mesmas matrizes, então o resultado deve ser sempre o mesmo).
-+ Para essa parte troquei as funçoes de MPI_Send e MPI_Recv para MPI_Gatther E MPI_Scatter, também fiz uso de MPI_Bcast. 
++ Para essa parte troquei as funçoes de MPI_Send e MPI_Recv para MPI_Gatther E MPI_Scatter, também fiz uso de MPI_Bcast. Apaguei o if que não seria necessario pois as outras funçoes já fariam seu trabalho. 
 MPI_Scatter copiará o elemento apropriado no buffer de recebimento do processo.
 MPI_Bcast usa um único elemento de dados no processo raiz (a caixa vermelha) e o copia para todos os outros processos.
-MPI_Gather é o inverso do MPI_Scatter . Em vez de espalhar elementos de um processo para muitos processos, o MPI_Gather elementos de vários processos e os reúne em um único processo.
+MPI_Gather é o inverso do MPI_Scatter . Em vez de espalhar elementos de um processo para muitos processos, o MPI_Gather une elementos de vários processos e os reúne em um único processo.
 
 [Link códígo modificado](matriz_mult_sr.c)
 

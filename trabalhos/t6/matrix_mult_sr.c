@@ -55,23 +55,12 @@ int main(int argc, char *argv[])
     fill_matrix(A);
     fill_matrix(B);
   }
+//divide a matriz b 
+  MPI_Bcast(B, SIZE*SIZE, MPI_INT, 0 ,MPI_COMM_WORLD);
+//divide a matriz a pelos processos
+  MPI_Scatter(A[from], (to-from)*SIZE, MPI_INT, A[from], (to-from)*SIZE, MPI_INT, 0, MPI_COMM_WORLD);
 
-   
-  if (myrank == 0){
-    for (int i = 1; i < nproc; ++i){
-      int lFrom = i * SIZE/nproc;
-      int lTo = (i+1) * SIZE/nproc;
-      //printf("slice log: %d, %d\n", lFrom, lTo);
-      // Broadcast B to other process
-     MPI_Bcast(B, SIZE*SIZE, MPI_INT, 0 ,MPI_COMM_WORLD);
-      // Send "Total of lines" / "Number of process" lines to other process
-      MPI_Scatter(A[from], (to-from)*SIZE, MPI_INT, A[from], (to-from)*SIZE, MPI_INT, 0, MPI_COMM_WORLD);
-    }
-  } else {
-      MPI_Gather (C[from], SIZE*SIZE/nproc, MPI_INT, C, SIZE*SIZE/nproc, MPI_INT, 0, MPI_COMM_WORLD);
- 
-  }
-  printf("computing slice %d (from row %d to %d)\n", myrank, from, to-1);
+//realiza o calculo
   for (i=from; i<to; i++) {
     for (j=0; j<SIZE; j++) {
       C[i][j]=0;
@@ -80,7 +69,7 @@ int main(int argc, char *argv[])
       }
     }
   }
-
+//recebe o resultado e junta todos no processo principal
   MPI_Gather (C[from], SIZE*SIZE/nproc, MPI_INT, C, SIZE*SIZE/nproc, MPI_INT, 0, MPI_COMM_WORLD);
 
   if (myrank==0) {

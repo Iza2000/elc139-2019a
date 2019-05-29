@@ -29,9 +29,6 @@ int main(int argc, char** argv) {
   //Difusão dos processos usando broadcast
   MPI_Bcast(&data, count, datatype , 0 ,MPI_COMM_WORLD);
   MPI_Barrier(MPI_COMM_WORLD);
-
-
-  
   if (myrank == root) {         
 
     // Se for o rank root, enviar o dado para cada um dos demais
@@ -46,11 +43,11 @@ int main(int argc, char** argv) {
     MPI_Recv(&data, count, datatype, root, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
     printf("Processo %d recebendo dado %d do processo root\n", myrank, data); 
   }
+
   end_time_mpi = MPI_Wtime();
   time_total = end_time_mpi - start_time_mpi;
   printf("\nEsse é o tempo de execução em segundos: %f ", time_total);
+  
   MPI_Finalize();
-
-
   return 0;
 }

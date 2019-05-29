@@ -9,7 +9,8 @@ Conforme solicitado, implementei um programinha que utiliza a função nativa do
 
 + Coletar e comparar (em forma de gráfico) os tempos de execução de cada uma das implementações do broadcast, variando o número de processos;
 
-![Gráfico da função sr_bcast](https://github.com/gleckel/elc139-2019a/tree/master/trabalhos/t7/srbcast.png)
+
+<img src = srbcast.png>
 
 ## Parte 2 
 

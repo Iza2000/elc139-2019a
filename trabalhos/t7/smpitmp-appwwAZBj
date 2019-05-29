@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid/simgrid.dtd">
+<platform version="4.1">
+  <actor host="host-0.ufsm.br" function="0"> <!-- function name used only for logging -->
+    <argument value="smpirun"/> <!-- instance -->
+    <argument value="0"/> <!-- rank -->
+<argument value="1000"/>
+  </actor>
+  <actor host="host-1.ufsm.br" function="1"> <!-- function name used only for logging -->
+    <argument value="smpirun"/> <!-- instance -->
+    <argument value="1"/> <!-- rank -->
+<argument value="1000"/>
+  </actor>
+</platform>

@@ -1,0 +1,49 @@
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid/simgrid.dtd">
+<platform version="4.1">
+  <actor host="host-0.ufsm.br" function="0"> <!-- function name used only for logging -->
+    <argument value="smpirun"/> <!-- instance -->
+    <argument value="0"/> <!-- rank -->
+<argument value="1000"/>
+  </actor>
+  <actor host="host-1.ufsm.br" function="1"> <!-- function name used only for logging -->
+    <argument value="smpirun"/> <!-- instance -->
+    <argument value="1"/> <!-- rank -->
+<argument value="1000"/>
+  </actor>
+  <actor host="host-2.ufsm.br" function="2"> <!-- function name used only for logging -->
+    <argument value="smpirun"/> <!-- instance -->
+    <argument value="2"/> <!-- rank -->
+<argument value="1000"/>
+  </actor>
+  <actor host="host-3.ufsm.br" function="3"> <!-- function name used only for logging -->
+    <argument value="smpirun"/> <!-- instance -->
+    <argument value="3"/> <!-- rank -->
+<argument value="1000"/>
+  </actor>
+  <actor host="host-4.ufsm.br" function="4"> <!-- function name used only for logging -->
+    <argument value="smpirun"/> <!-- instance -->
+    <argument value="4"/> <!-- rank -->
+<argument value="1000"/>
+  </actor>
+  <actor host="host-5.ufsm.br" function="5"> <!-- function name used only for logging -->
+    <argument value="smpirun"/> <!-- instance -->
+    <argument value="5"/> <!-- rank -->
+<argument value="1000"/>
+  </actor>
+  <actor host="host-6.ufsm.br" function="6"> <!-- function name used only for logging -->
+    <argument value="smpirun"/> <!-- instance -->
+    <argument value="6"/> <!-- rank -->
+<argument value="1000"/>
+  </actor>
+  <actor host="host-7.ufsm.br" function="7"> <!-- function name used only for logging -->
+    <argument value="smpirun"/> <!-- instance -->
+    <argument value="7"/> <!-- rank -->
+<argument value="1000"/>
+  </actor>
+  <actor host="host-8.ufsm.br" function="8"> <!-- function name used only for logging -->
+    <argument value="smpirun"/> <!-- instance -->
+    <argument value="8"/> <!-- rank -->
+<argument value="1000"/>
+  </actor>
+</platform>

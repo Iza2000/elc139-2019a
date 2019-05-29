@@ -7,10 +7,16 @@
 + Implementar um programa para comparar a implementação do broadcast com send e receive (fornecida) com a função MPI_Bcast nativa do MPI;
     Conforme solicitado, implementei um programinha que utiliza a função nativa do MPI, MPI_Bcast. E aqui esta o [LINK](teste.c) para o código. 
 
-+ Coletar e comparar (em forma de gráfico) os tempos de execução de cada uma das implementações do broadcast, variando o número de processos; Considerando que na linha horizontal estão o numero de processos e na linha diagonal o tempo de execução no padrão de 0.0000xx; Todas as execuções foram feitas com o tamanho do vetor 1000;
++ Coletar e comparar (em forma de gráfico) os tempos de execução de cada uma das implementações do broadcast, variando o número de processos;
++  Considerando que na linha horizontal estão o numero de processos e na linha diagonal o tempo de execução no padrão de 0.0000xx; Todas as execuções foram feitas com o tamanho do vetor 1000;
 
 <img src = srbcast.png>
 <img src = teste.png>
+
++ Considerando que na linha horizontal estão o numero de processos e na linha diagonal o tempo de execução no padrão de 0.0000xx; Todas as execuções foram feitas com o tamanho do vetor 2000;
+
+<img src = srbcast2.png>
+<img src = teste2.png>
 
 ## Parte 2 
 

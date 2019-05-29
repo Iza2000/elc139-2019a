@@ -9,6 +9,8 @@ Conforme solicitado, implementei um programinha que utiliza a função nativa do
 
 + Coletar e comparar (em forma de gráfico) os tempos de execução de cada uma das implementações do broadcast, variando o número de processos;
 
+![Gráfico da função sr_bcast](https://github.com/gleckel/elc139-2019a/tree/master/trabalhos/t7/srbcast.png)
+
 ## Parte 2 
 
 Utilizando o simulador SMPI com os arquivos cluster_crossbar.xml e cluster_hostfile.txt como parâmetros, realize execuções variando as configurações que descrevem as características do ambiente distribuido simulado.

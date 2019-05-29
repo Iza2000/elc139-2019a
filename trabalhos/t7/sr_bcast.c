@@ -44,21 +44,21 @@ int main(int argc, char** argv) {
 
   int data;     // dado a ser enviado
   root = 0;     // define o rank do root
-  start_time_mpi = MPI_Wtime();
+ 
   if (myrank == root) {
     data = 100;  // atribui um valor para ser enviado
     printf("Processo %d (root) realizando broadcast do dado %d\n", root, data);
+    start_time_mpi = MPI_Wtime();
     sr_bcast(&data, 1, MPI_INT, root, MPI_COMM_WORLD);
+    end_time_mpi = MPI_Wtime();
+    time_total = end_time_mpi - start_time_mpi;
+    printf("Esse é o tempo de execução: %f \n", time_total);
+  
   } else {
     sr_bcast(&data, 1, MPI_INT, root, MPI_COMM_WORLD);
     printf("Processo %d recebendo dado %d do processo root\n", myrank, data);
   }
 
   MPI_Finalize();
-
-  end_time_mpi = MPI_Wtime();
-  time_total = end_time_mpi - start_time_mpi;
-  printf("\nEsse é o tempo de execução em segundos: %f ", time_total);
-
   return 0;
 }

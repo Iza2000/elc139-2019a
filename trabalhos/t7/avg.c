@@ -40,7 +40,7 @@ int main(int argc, char** argv) {
   // Seed the random number generator to get different results each time
   srand(time(NULL));
 
-  MPI_Init(NULL, NULL);
+  MPI_Init(&argc, &argv);
 
   int world_rank;
   MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);

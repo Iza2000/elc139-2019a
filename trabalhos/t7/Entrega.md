@@ -1,6 +1,7 @@
 # T7: Avaliação de desempenho de programas MPI
 
 #### Nome: Gabriela Luisa Eckel
+#### Disciplina: Programação Paralela
 
 ## Parte 1
 
@@ -17,7 +18,8 @@
 ## Parte 2 
 
 Utilizando o simulador SMPI com os arquivos cluster_crossbar.xml e cluster_hostfile.txt como parâmetros, realize execuções variando as configurações que descrevem as características do ambiente distribuido simulado. 
-Para as medições de tempo no arquivo [avg.c](avg.c) utilizei a biblioteca time.h do C. 
+Para as medições de tempo no arquivo [avg.c](avg.c) utilizei a biblioteca time.h do C. E as incrementei nas seguintes linhas de código.
+
 ```
 63.  start_time_mpi = MPI_Wtime();
 
@@ -25,11 +27,10 @@ Para as medições de tempo no arquivo [avg.c](avg.c) utilizei a biblioteca time
 96.   printf("%f\n", (end_time_mpi - start_time_mpi) * 1000);
 97.     printf("Avg of all elements is %f\n", avg);
 ```
-
-
-    
+ 
 + Realize execuções variando os valores de "bw" (largura de banda) e "lat" (latência) no arquivo cluster_crossbar.xml;
 + Realizei várias variações de latencia e largura de banda, que estão sendo demonstradas no gráfico a seguir; Para essas execuções utilizei um vetor de 3000.
+  <img src = comparativobw.png>
 
 + Realize execuções variando o tamanho do vetor;
 +  Utilizei como variação de tamanho do vetor, 2000 e 3000; Na linha horizontal encontra-se o numero de  processos, e na linha vertical o tempo das execuções.

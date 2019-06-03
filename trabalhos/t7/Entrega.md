@@ -30,7 +30,7 @@ Para as medições de tempo no arquivo [avg.c](avg.c) utilizei a biblioteca time
  
 + Realize execuções variando os valores de "bw" (largura de banda) e "lat" (latência) no arquivo cluster_crossbar.xml;
 + Realizei várias variações de latencia e largura de banda, que estão sendo demonstradas no gráfico a seguir; Para essas execuções utilizei um vetor de 3000.
-  <img src = comparativobw.png>
+  <img src = comparativox.png>
 
 + Realize execuções variando o tamanho do vetor;
 +  Utilizei como variação de tamanho do vetor, 2000 e 3000; Na linha horizontal encontra-se o numero de  processos, e na linha vertical o tempo das execuções.

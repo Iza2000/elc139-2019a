@@ -11,7 +11,7 @@ Para essa parte foi implementado o seguinte [Código](wavecuda1.cu).
 + Analise o desempenho do programa, começando pela medição dos tempos de execução sequencial e paralela para pelo menos 4 diferentes entradas do programa, sendo: a) 1024 100, b) 1024 200 e outras 2 entradas à sua escolha. Compare os tempos obtidos. Use nvprof para analisar o perfil de execução em GPU. Explique seus resultados.
 Para paralelizar criei uma função kernel. Mostrada a seguir 
 ```
-~~~c
+~~~javascript
 __global__
 void fazPixel(int width, int frames, unsigned char* pic)
 {

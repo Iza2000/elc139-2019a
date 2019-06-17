@@ -11,7 +11,7 @@ void fazPixel(int width, int frames, unsigned char* pic)
 {
   int ix = threadIdx.x;
   int of = blockDim.x;
-  for (int frame = ix; frame < frames; frame += ofs) {
+  for (int frame = ix; frame < frames; frame += of) {
   //for (int frame = 0; frame < frames; frame++) {
     for (int row = 0; row < width; row++) {
       for (int col = 0; col < width; col++) {

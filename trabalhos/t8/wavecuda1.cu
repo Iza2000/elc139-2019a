@@ -7,7 +7,7 @@
 
 //função kernel que faz as frames
 __global__
-void cPixel(int width, int frames, unsigned char* pic)
+void fazPixel(int width, int frames, unsigned char* pic)
 {
   int ix = threadIdx.x;
   int of = blockDim.x;
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
   timeval start, end;
   gettimeofday(&start, NULL);
 
-  cPixel<<<1, frames>>>(width, frames, pic);
+  fazPixel<<<1, frames>>>(width, frames, pic);
 
   cudaDeviceSynchronize();
 
@@ -62,7 +62,6 @@ int main(int argc, char *argv[])
     }
   }
 
-  //delete [] pic;
   cudaFree(pic);
   return 0;
 }

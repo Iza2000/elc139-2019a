@@ -1,5 +1,5 @@
-
-
+//versao adaptada de wave para versão paralela
+//gleckel- 201821180
 #include <cstdlib>
 #include <sys/time.h>
 #include <math.h>

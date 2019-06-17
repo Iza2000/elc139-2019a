@@ -6,11 +6,8 @@
 
 ## Parte 1
 
-+ Implemente um programa nomeado wavecuda1.cu, em que cada frame seja computado em paralelo por uma thread diferente.
-Para essa parte foi implementado o seguinte [Código](wavecuda1.cu).
-+ Analise o desempenho do programa, começando pela medição dos tempos de execução sequencial e paralela para pelo menos 4 diferentes entradas do programa, sendo: a) 1024 100, b) 1024 200 e outras 2 entradas à sua escolha. Compare os tempos obtidos. Use nvprof para analisar o perfil de execução em GPU. Explique seus resultados.
-Para paralelizar criei uma função kernel. Mostrada a seguir 
-~~~javascript
+Para paralelizar criei uma função kernel no for, que utiliza o numero de frames para criar o numero de threads. 
+~~~java
 __global__
 void fazPixel(int width, int frames, unsigned char* pic)
 {
@@ -33,6 +30,7 @@ void fazPixel(int width, int frames, unsigned char* pic)
   }
 }
 ~~~
+E para medir seu tempo utilizei a biblioteca sys/time.h na função assim. 
 Para a analise, comparei o programa sequencial [wave.c](wave.c), com a sua versão paralelizada[wavecuda1.cu](wavecuda1.cu).
 
 Tempo em MS| 1024 100 | 1024 200 | 2048 100 | 2048 200 
@@ -44,14 +42,18 @@ Acredito que o resultado é o esperado pois os tempos vão subindo de acordo com
 
 ## Parte 2 
 
-+ Implemente um programa nomeado wavecuda2.cu, que aproveite melhor o paralelismo da GPU.
-  Para essa parte foi desenvolvido o seguinte [Código](wavecuda2.cu).
+Para essa parte utilizei o mesmo [código](wavecuda2.cu) criado anteriormente, pois acredito que é a melhor forma para paralelizar este programa. Realizei testes que serão demonstrados a seguir. 
 
-+ Analise o desempenho do segundo programa.
+xxxxx|    524   |    1024    |   2048   |    4068  
+-----|----------|------------|----------|----------
+32   |3.251136ms|3.395616ms  |12.61853ms|185.2839ms
+64   |9.784736ms|6.874368ms  |24.14803ms|317.3417ms
 
-
+Analisando os resultados, percebi que os tempos variam bastante, mas normalmente crescem quando se trata de numeros grandes, o que era esperado. Me surpreendi um pouco com o resultado da execução 1024 x 64 pois o resultado foi melhor que o esperado.
 
 ## Referencias 
  
 - [Introdução​​ ao​​ CUDA, Davi Conte](https://edisciplinas.usp.br/pluginfile.php/4146828/mod_resource/content/1/MaterialCUDA.pdf)
-
+- [O que é cuda?, Pedro Cipoli](https://canaltech.com.br/hardware/O-que-e-a-CUDA/)
+- [Cuda em ação](https://www.nvidia.com.br/object/cuda_in_action_br.html)
+- [O que são nucleos CUDA?](https://www.techtudo.com.br/noticias/noticia/2017/04/o-que-sao-nucleos-cuda-nas-placas-da-nvidia.html)

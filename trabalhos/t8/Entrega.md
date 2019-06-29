@@ -42,7 +42,6 @@ Acredito que o resultado é o esperado pois os tempos vão subindo de acordo com
 
 ## Parte 2 
 
-Para essa parte utilizei o mesmo [código](wavecuda2.cu) criado anteriormente, pois acredito que é a melhor forma para paralelizar este programa. Realizei testes que serão demonstrados a seguir. 
 
 xxxxx|    524   |    1024    |   2048   |    4068  
 -----|----------|------------|----------|----------
